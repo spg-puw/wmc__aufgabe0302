@@ -1,0 +1,39 @@
+<!-- in dieser Datei befindet sich das Mini-Frontend zum Anzeigen -->
+<html>
+
+<head>
+    <title>MiniFrontend</title>
+</head>
+
+<body>
+    <h2>Produkt hinzufügen</h2>
+
+    <!-- HIER EINE FORM EINFÜGEN - PRODUKT HINZUFÜGEN-->>
+
+    <h2>Produkte anzeigen</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Produktname</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody id="products">
+
+        </tbody>
+    </table>
+
+    <button onclick="loadData()">Daten laden</button>
+
+    <script>
+        async function loadData() {
+            //TODO
+        }
+
+        window.onload = loadData;
+    </script>
+</body>
+
+</html>

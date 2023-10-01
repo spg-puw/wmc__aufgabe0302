@@ -1,6 +1,6 @@
-const express = require('express');
-const crypto = require('crypto');
-const app = express();
+import express from 'express'
+import crypto from 'crypto';
+export const app = express();
 const port = 3000;
 
 const products = [];
@@ -16,7 +16,10 @@ app.get('/', (req, res) => {
 
 //TODO: hier die express Endpoints einfügen
 
-app.listen(port, () => {
-  console.log(`Webserver gestartet: http://localhost:${port}`);
-  console.log(`Zum Beenden: Ctrl+C`);
-})
+export default { app }
+if (import.meta.url.endsWith(process.argv[1])) {
+    app.listen(port, () => {
+        console.log(`Webserver gestartet: http://localhost:${port}`);
+        console.log(`Zum Beenden: Ctrl+C`);
+    })
+}
